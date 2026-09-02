@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women Empowerment Organization — Empowering Voices, Transforming Futures</title>
+  <meta name="description" content="A global social-impact movement dedicated to uplifting women through transformative education, vocational skills, economic independence, and grassroots leadership.">
+  
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C95C78'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+
+  <!-- Google Fonts: Playfair Display + DM Serif Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Grain overlay for tactile editorial feel -->
+  <div class="editorial-grain" aria-hidden="true"></div>
+
+  <!-- Custom Cursor / Follower (Desktop only) -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+  <!-- ========================================================================= -->
+  <!-- NAVIGATION HEADER                                                         -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Women Empowerment Organization Home">
+        <span class="logo-symbol">✦</span>
+        <div class="logo-text">
+          <span class="logo-main">AURA</span>
+          <span class="logo-sub">Women Empowerment</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav (Visible ONLY > 1024px) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#mission" class="nav-link">Mission</a></li>
+          <li><a href="#what-we-do" class="nav-link">What We Do</a></li>
+          <li><a href="#impact" class="nav-link">Impact</a></li>
+          <li><a href="#stories" class="nav-link">Stories</a></li>
+          <li><a href="#news" class="nav-link">Latest News</a></li>
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#impact-map" class="nav-link">Global Reach</a></li>
+          <li><a href="#get-involved" class="nav-link">Get Involved</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="btn btn-pill btn-primary header-donate-btn" id="headerDonateBtn" data-modal="donateModal">
+          <span>Donate Now</span>
+          <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Mobile/Tablet Hamburger Toggle (Visible <= 1024px on Right) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="ham-line ham-line-1"></span>
+          <span class="ham-line ham-line-2"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <div class="drawer-brand">
+          <span class="logo-symbol">✦</span>
+          <span>AURA Organization</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">✕</button>
+      </div>
+
+      <ul class="drawer-nav">
+        <li><a href="#hero" class="drawer-link"><span class="drawer-num">01</span><span>Home</span></a></li>
+        <li><a href="#mission" class="drawer-link"><span class="drawer-num">02</span><span>Our Mission</span></a></li>
+        <li><a href="#what-we-do" class="drawer-link"><span class="drawer-num">03</span><span>What We Do</span></a></li>
+        <li><a href="#impact" class="drawer-link"><span class="drawer-num">04</span><span>Measurable Impact</span></a></li>
+        <li><a href="#stories" class="drawer-link"><span class="drawer-num">05</span><span>Stories of Change</span></a></li>
+        <li><a href="#news" class="drawer-link"><span class="drawer-num">06</span><span>Latest News</span></a></li>
+        <li><a href="#programs" class="drawer-link"><span class="drawer-num">07</span><span>Programs</span></a></li>
+        <li><a href="#impact-map" class="drawer-link"><span class="drawer-num">08</span><span>Impact Map</span></a></li>
+        <li><a href="#get-involved" class="drawer-link"><span class="drawer-num">09</span><span>Get Involved</span></a></li>
+      </ul>
+
+      <div class="drawer-footer">
+        <button class="btn btn-primary btn-block btn-lg" data-modal="donateModal">Make a Donation</button>
+        <div class="drawer-contact-mini">
+          <span>contact@aura-empowerment.org</span>
+          <span>Global Social Impact Initiative</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- ===================================================================== -->
+      <!-- 01 — HERO SECTION (PERFECTLY CENTERED)                                -->
+      <!-- ===================================================================== -->
+      <section class="section-hero" id="hero">
+        <!-- Background Documentary UHD Video & Plum Overlay Layer -->
+        <div class="hero-bg-container">
+          <video class="hero-bg-video" autoplay muted loop playsinline poster="IMAGE/WOMEN (1).jpg" id="heroBgVideo">
+            <source src="VIDEOS/7202832-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            <img src="IMAGE/WOMEN (1).jpg" alt="Portraits of resilient women leaders" class="hero-bg-img" id="heroBgImage">
+          </video>
+          <div class="hero-plum-overlay"></div>
+          <div class="hero-vignette"></div>
+        </div>
+
+        <!-- Subtle Three.js Ambient Particle / Ribbon Canvas -->
+        <canvas id="heroThreeCanvas" class="hero-three-canvas" aria-hidden="true"></canvas>
+
+        <div class="hero-content container text-center">
+          <div class="hero-badge reveal-fade">
+            <span class="pulse-dot"></span>
+            <span>A Global Movement for Women's Autonomy</span>
+          </div>
+
+          <h1 class="hero-title reveal-text">
+            Empowering <span class="text-italic-serif">Voices</span>,<br>
+            Transforming <span class="highlight-accent">Futures.</span>
+          </h1>
+
+          <p class="hero-subtitle reveal-fade">
+            Unlocking unrestricted economic potential, vocational mastery, and grassroots leadership for over 12,500 women across 86 resilient communities worldwide.
+          </p>
+
+          <div class="hero-cta-group reveal-fade">
+            <button class="btn btn-lg btn-accent" data-modal="donateModal" id="heroPrimaryDonate">
+              <span>Donate to the Mission</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#get-involved" class="btn btn-lg btn-outline-light">
+              <span>Get Involved</span>
+              <span class="btn-subtext">Volunteer & Mentor</span>
+            </a>
+          </div>
+
+          <!-- Hero Bottom Editorial Badge & Scroll Hint -->
+          <div class="hero-footer-bar reveal-fade">
+            <div class="hero-stat-pill">
+              <span class="pill-number">100%</span>
+              <span class="pill-label">Direct Grassroots Allocation</span>
+            </div>
+            <div class="hero-scroll-indicator">
+              <span class="mouse-icon"><span class="wheel"></span></span>
+              <span>Scroll to Explore</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 02 — MISSION SECTION (CENTER ALIGNED)                                 -->
+      <!-- ===================================================================== -->
+      <section class="section-mission section-padding text-center" id="mission">
+        <div class="container">
+          <div class="section-tag reveal-fade">
+            <span class="tag-number">02</span>
+            <span class="tag-label">OUR CORE PHILOSOPHY</span>
+          </div>
+
+          <div class="mission-grid">
+            <!-- Left Text Column -->
+            <div class="mission-text-col">
+              <h2 class="mission-headline reveal-text">
+                We believe equality isn’t a privilege—it is the catalyst for <span class="text-plum-italic">generational breakthrough</span>.
+              </h2>
+
+              <div class="animated-divider" aria-hidden="true">
+                <div class="divider-line"></div>
+                <div class="divider-gem">✦</div>
+              </div>
+
+              <p class="mission-body lead reveal-fade">
+                When a woman secures sovereign economic authority, her entire community thrives. We dismantle systemic barriers through radical mentorship, capital allocation, and peer-to-peer leadership networks.
+              </p>
+
+              <div class="mission-features reveal-fade">
+                <div class="m-feat-item">
+                  <div class="m-feat-icon">01</div>
+                  <div class="m-feat-content">
+                    <h4>Direct Resource Sovereignty</h4>
+                    <p>Direct funding and tools given without paternalistic oversight to catalyze local enterprise.</p>
+                  </div>
+                </div>
+                <div class="m-feat-item">
+                  <div class="m-feat-icon">02</div>
+                  <div class="m-feat-content">
+                    <h4>Intergenerational Mentorship</h4>
+                    <p>Pairing emerging changemakers with established female executives and community matriarchs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Visual Column -->
+            <div class="mission-visual-col reveal-fade">
+              <div class="editorial-image-card">
+                <div class="img-wrapper">
+                  <img src="IMAGE/WOMEN (2).jpg" alt="Women artisans in a cooperative learning workshop" loading="lazy" class="parallax-img">
+                </div>
+                <div class="image-caption-badge">
+                  <span class="badge-icon">✦</span>
+                  <div>
+                    <strong>Dignity & Autonomy</strong>
+                    <p>Community Cooperative Workshop, 2026</p>
+                  </div>
+                </div>
+                <div class="visual-decor-box"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 03 — WHAT WE DO SECTION (CENTERED CARDS)                              -->
+      <!-- ===================================================================== -->
+      <section class="section-what-we-do section-padding bg-plum text-light text-center" id="what-we-do">
+        <div class="container">
+          <div class="section-header-editorial">
+            <div class="section-tag text-accent reveal-fade">
+              <span class="tag-number">03</span>
+              <span class="tag-label">PILLARS OF TRANSFORMATION</span>
+            </div>
+            <h2 class="section-title reveal-text">
+              Four pathways to lasting independence.
+            </h2>
+            <p class="section-desc reveal-fade">
+              Holistic interventions designed to address educational gaps, financial fragility, and executive underrepresentation simultaneously.
+            </p>
+          </div>
+
+          <!-- 4 Large Interactive Cards -->
+          <div class="pillars-grid" id="pillarsGrid">
+            <!-- Card 1 -->
+            <article class="pillar-card active" data-img="IMAGE/WOMEN (4).jpg" data-index="0">
+              <div class="card-bg-img" style="background-image: url('IMAGE/WOMEN (4).jpg');"></div>
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span class="pillar-index">01 / PATHWAY</span>
+                <h3 class="pillar-title">Education & Literacy</h3>
+                <p class="pillar-desc">
+                  Providing foundational literacy, digital fluency, and scholarships to young women facing geographic and economic barriers.
+                </p>
+                <div class="pillar-metrics">
+                  <span class="metric-pill">4,500+ Scholars</span>
+                  <span class="metric-pill">98% Completion</span>
+                </div>
+                <div class="pillar-hover-arrow">
+                  <span>Explore Curriculum</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="pillar-card" data-img="IMAGE/WOMEN (5).jpg" data-index="1">
+              <div class="card-bg-img" style="background-image: url('IMAGE/WOMEN (5).jpg');"></div>
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span class="pillar-index">02 / PATHWAY</span>
+                <h3 class="pillar-title">Vocational Mastery</h3>
+                <p class="pillar-desc">
+                  Intensive hands-on technical training in sustainable agriculture, artisan craftsmanship, software engineering, and supply chain.
+                </p>
+                <div class="pillar-metrics">
+                  <span class="metric-pill">32 Specialized Labs</span>
+                  <span class="metric-pill">Certified Guilds</span>
+                </div>
+                <div class="pillar-hover-arrow">
+                  <span>Explore Guilds</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="pillar-card" data-img="IMAGE/WOMEN (6).jpg" data-index="2">
+              <div class="card-bg-img" style="background-image: url('IMAGE/WOMEN (6).jpg');"></div>
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span class="pillar-index">03 / PATHWAY</span>
+                <h3 class="pillar-title">Economic Independence</h3>
+                <p class="pillar-desc">
+                  Zero-interest seed capital grants, micro-savings syndicates, and direct market access for women-led micro-enterprises.
+                </p>
+                <div class="pillar-metrics">
+                  <span class="metric-pill">$1.8M Capital Disbursed</span>
+                  <span class="metric-pill">99.2% Repay Rate</span>
+                </div>
+                <div class="pillar-hover-arrow">
+                  <span>Explore Capital</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="pillar-card" data-img="IMAGE/WOMEN (7).jpg" data-index="3">
+              <div class="card-bg-img" style="background-image: url('IMAGE/WOMEN (7).jpg');"></div>
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span class="pillar-index">04 / PATHWAY</span>
+                <h3 class="pillar-title">Leadership & Advocacy</h3>
+                <p class="pillar-desc">
+                  Cultivating civic changemakers, policy negotiators, and grassroots organizers to champion institutional rights.
+                </p>
+                <div class="pillar-metrics">
+                  <span class="metric-pill">86 Councils Formed</span>
+                  <span class="metric-pill">Policy Impact</span>
+                </div>
+                <div class="pillar-hover-arrow">
+                  <span>Explore Advocacy</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 04 — IMPACT COUNTER SECTION (CENTERED)                                -->
+      <!-- ===================================================================== -->
+      <section class="section-impact section-padding text-center" id="impact">
+        <div class="container">
+          <div class="impact-header text-center">
+            <div class="section-tag reveal-fade">
+              <span class="tag-number">04</span>
+              <span class="tag-label">MEASURED ACCOUNTABILITY</span>
+            </div>
+            <h2 class="section-title reveal-text">Real numbers. Verified impact.</h2>
+            <p class="section-desc reveal-fade">
+              Every initiative is rigorously tracked with transparent third-party auditing and real-world socioeconomic benchmarks.
+            </p>
+          </div>
+
+          <!-- Oversized Animated Statistics Grid -->
+          <div class="stats-grid" id="statsGrid">
+            <!-- Stat 1 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-counter" data-target="12500">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <h3 class="stat-label">Women Supported</h3>
+              <p class="stat-detail">Across direct education, health, and enterprise incubator pipelines.</p>
+              <div class="stat-growth-tag">↑ 42% YoY Growth</div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-counter" data-target="86">0</span>
+                <span class="stat-plus"></span>
+              </div>
+              <h3 class="stat-label">Communities Activated</h3>
+              <p class="stat-detail">Vibrant rural and urban centers actively operating self-sustaining hubs.</p>
+              <div class="stat-growth-tag">14 Regional Hubs</div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-counter" data-target="4200">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <h3 class="stat-label">Certified Graduates</h3>
+              <p class="stat-detail">Graduates from accredited vocational, business, and technology curriculums.</p>
+              <div class="stat-growth-tag">92% Graduation Rate</div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="stat-card">
+              <div class="stat-icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-counter" data-target="78">0</span>
+                <span class="stat-plus">%</span>
+              </div>
+              <h3 class="stat-label">Income & Employment Growth</h3>
+              <p class="stat-detail">Average verifiable rise in participant household income within 18 months.</p>
+              <div class="stat-growth-tag">Economic Resiliency</div>
+            </div>
+          </div>
+
+          <!-- Live Impact Certificate Banner -->
+          <div class="impact-quote-card reveal-fade">
+            <div class="quote-content">
+              <p class="quote-text">
+                “When we educate and fund a woman, she reinvests up to 90% of her earnings back into her family and community nutrition, education, and healthcare.”
+              </p>
+              <div class="quote-author">
+                <strong>Global Economic Empowerment Forum</strong>
+                <span>Verified Impact Research & Audited Outcome Report</span>
+              </div>
+            </div>
+            <a href="#impact-map" class="btn btn-secondary">
+              <span>View Map Verification</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 05 — STORIES OF CHANGE (CENTERED SWIPER)                              -->
+      <!-- ===================================================================== -->
+      <section class="section-stories section-padding bg-cream text-center" id="stories">
+        <div class="container">
+          <div class="stories-header-wrapper">
+            <div class="section-tag reveal-fade">
+              <span class="tag-number">05</span>
+              <span class="tag-label">LIVED EXPERIENCES</span>
+            </div>
+            <h2 class="section-title reveal-text">Stories of Transformation</h2>
+            
+            <!-- Custom Swiper Controls -->
+            <div class="swiper-nav-buttons">
+              <button class="swiper-btn-prev" id="storyPrevBtn" aria-label="Previous story">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <button class="swiper-btn-next" id="storyNextBtn" aria-label="Next story">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Swiper Slider Container -->
+          <div class="swiper stories-swiper" id="storiesSwiper">
+            <div class="swiper-wrapper">
+
+              <!-- Story Slide 1 -->
+              <div class="swiper-slide story-slide">
+                <div class="story-card-layout">
+                  <div class="story-portrait-col">
+                    <div class="portrait-img-box">
+                      <img src="IMAGE/WOMEN (9).jpg" alt="Amara K., Founder of Solar Bloom Cooperative" class="story-portrait-img">
+                      <div class="story-badge">
+                        <span>Cohort of 2024</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="story-narrative-col">
+                    <div class="story-meta">
+                      <span class="story-country">Nairobi Hub</span>
+                      <span class="story-role">Agritech Entrepreneur</span>
+                    </div>
+                    <h3 class="story-headline">“I went from selling loose grain to employing 24 women in solar-powered milling.”</h3>
+                    
+                    <!-- Before -> Journey -> After Journey Matrix -->
+                    <div class="journey-matrix">
+                      <div class="j-step">
+                        <span class="j-label">Before</span>
+                        <p>Subsistence farmer vulnerable to weather shocks, earning less than $1.40/day.</p>
+                      </div>
+                      <div class="j-step j-accent">
+                        <span class="j-label">The Journey</span>
+                        <p>Completed 9-month Clean Energy & Enterprise Guild + $1,200 zero-interest seed grant.</p>
+                      </div>
+                      <div class="j-step j-highlight">
+                        <span class="j-label">After</span>
+                        <p>Built 2 solar milling centers powering 3 villages and funding education for 48 children.</p>
+                      </div>
+                    </div>
+
+                    <div class="story-quote-footer">
+                      <strong>Amara Kamau</strong>
+                      <span>Managing Director, Solar Harvest Collective</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story Slide 2 -->
+              <div class="swiper-slide story-slide">
+                <div class="story-card-layout">
+                  <div class="story-portrait-col">
+                    <div class="portrait-img-box">
+                      <img src="IMAGE/WOMEN (10).jpg" alt="Fatima R., Software Engineer & Coding Guild Mentor" class="story-portrait-img">
+                      <div class="story-badge">
+                        <span>Cohort of 2025</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="story-narrative-col">
+                    <div class="story-meta">
+                      <span class="story-country">Dhaka Center</span>
+                      <span class="story-role">Lead Full-Stack Developer</span>
+                    </div>
+                    <h3 class="story-headline">“In our neighborhood, girls rarely finished secondary school. Today, I write code for global clients.”</h3>
+                    
+                    <div class="journey-matrix">
+                      <div class="j-step">
+                        <span class="j-label">Before</span>
+                        <p>No home computer access; family faced mounting pressure to arrange early marriage.</p>
+                      </div>
+                      <div class="j-step j-accent">
+                        <span class="j-label">The Journey</span>
+                        <p>Awarded full AURA Tech Fellowship, receiving mentorship and a dedicated workstation.</p>
+                      </div>
+                      <div class="j-step j-highlight">
+                        <span class="j-label">After</span>
+                        <p>Secured international remote engineering role; now personally mentors 15 young girls in coding.</p>
+                      </div>
+                    </div>
+
+                    <div class="story-quote-footer">
+                      <strong>Fatima Rahman</strong>
+                      <span>Software Engineer & Women In Tech Advocate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story Slide 3 -->
+              <div class="swiper-slide story-slide">
+                <div class="story-card-layout">
+                  <div class="story-portrait-col">
+                    <div class="portrait-img-box">
+                      <img src="IMAGE/WOMEN (11).jpg" alt="Lucia M., Community Health Guild Leader" class="story-portrait-img">
+                      <div class="story-badge">
+                        <span>Cohort of 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="story-narrative-col">
+                    <div class="story-meta">
+                      <span class="story-country">Oaxaca Outreach</span>
+                      <span class="story-role">Cooperative President</span>
+                    </div>
+                    <h3 class="story-headline">“When women hold collective financial power, community decisions shift towards health and children.”</h3>
+                    
+                    <div class="journey-matrix">
+                      <div class="j-step">
+                        <span class="j-label">Before</span>
+                        <p>Artisan weavers exploited by predatory middle-dealers retaining 85% of garment profits.</p>
+                      </div>
+                      <div class="j-step j-accent">
+                        <span class="j-label">The Journey</span>
+                        <p>Graduated from Financial Independence Guild; established direct-to-consumer digital registry.</p>
+                      </div>
+                      <div class="j-step j-highlight">
+                        <span class="j-label">After</span>
+                        <p>Revenues increased 340%; funded community health clinic serving over 800 rural residents.</p>
+                      </div>
+                    </div>
+
+                    <div class="story-quote-footer">
+                      <strong>Lucia Morales</strong>
+                      <span>President, Tejedoras Unidas Cooperative</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Custom Swiper Pagination / Progress Indicator -->
+            <div class="swiper-progress-custom">
+              <div class="swiper-pagination" id="storiesPagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 06 — SIGNATURE 3-CARD EDITORIAL NEWS & IMPACT GRID                    -->
+      <!-- ===================================================================== -->
+      <section class="section-news section-padding" id="news">
+        <div class="container">
+          <div class="section-header-editorial">
+            <div class="section-tag reveal-fade">
+              <span class="tag-number">06</span>
+              <span class="tag-label">LATEST FIELD DISPATCHES</span>
+            </div>
+            <h2 class="section-title reveal-text">Latest News & Chronicles</h2>
+            <p class="section-desc reveal-fade">
+              Explore real-time stories, educational breakthroughs, and community milestones from our active field operations.
+            </p>
+          </div>
+
+          <!-- The Exact 3-Card Grid Requested -->
+          <div class="news-three-card-grid">
+            
+            <!-- Card 1: Follow Our Latest News / Academic Excellence -->
+            <article class="news-card reveal-fade">
+              <div class="news-card-img-wrap">
+                <img src="IMAGE/WOMEN (8).jpg" alt="A young scholar holding academic achievement trophy" loading="lazy" class="news-card-img">
+              </div>
+              <div class="news-card-body">
+                <h3 class="news-card-title">Follow Our Latest News</h3>
+                <p class="news-card-excerpt">
+                  At AURA for Women, we are committed to empowering women and girls through education, advocacy, community outreach, and practical support. Throughout the year, we organise awareness […]
+                </p>
+                <div class="news-card-footer">
+                  <button class="news-meta-item like-btn" data-liked="false" data-count="0" aria-label="Like article">
+                    <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="like-count">0</span>
+                  </button>
+                  <div class="news-meta-item comment-info">
+                    <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>0</span>
+                  </div>
+                  <a href="javascript:void(0)" class="news-readmore-link" data-news="1">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+                    <span>Read more</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Making a Difference Together -->
+            <article class="news-card reveal-fade">
+              <div class="news-card-img-wrap">
+                <img src="IMAGE/WOMEN (17).jpg" alt="A community cooperative gathering of young women and children" loading="lazy" class="news-card-img">
+              </div>
+              <div class="news-card-body">
+                <h3 class="news-card-title">Making a Difference Together in 2026</h3>
+                <p class="news-card-excerpt">
+                  AURA for Women: Making a Difference Together in 2026. The first half of 2026 has been filled with meaningful activities that reflect AURA for Women's commitment […]
+                </p>
+                <div class="news-card-footer">
+                  <button class="news-meta-item like-btn" data-liked="false" data-count="0" aria-label="Like article">
+                    <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="like-count">0</span>
+                  </button>
+                  <div class="news-meta-item comment-info">
+                    <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>0</span>
+                  </div>
+                  <a href="javascript:void(0)" class="news-readmore-link" data-news="2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+                    <span>Read more</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Women's Rights and Menstrual Health -->
+            <article class="news-card reveal-fade">
+              <div class="news-card-img-wrap">
+                <img src="IMAGE/WOMEN (18).jpg" alt="Health and hygiene educator conducting a community workshop" loading="lazy" class="news-card-img">
+              </div>
+              <div class="news-card-body">
+                <h3 class="news-card-title">Women’s rights and menstrual health</h3>
+                <p class="news-card-excerpt">
+                  AURAforWomen and MINA Foundation are very happy to announce the collaborative project to support young female students in Dar-es-Salaam this week. For the very first time, […]
+                </p>
+                <div class="news-card-footer">
+                  <button class="news-meta-item like-btn" data-liked="true" data-count="6" aria-label="Like article">
+                    <svg class="meta-icon active" width="16" height="16" viewBox="0 0 24 24" fill="#C95C78" stroke="#C95C78" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="like-count">6</span>
+                  </button>
+                  <div class="news-meta-item comment-info">
+                    <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>0</span>
+                  </div>
+                  <a href="javascript:void(0)" class="news-readmore-link" data-news="3">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+                    <span>Read more</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 07 — SIGNATURE DUAL-TONE SPLIT FEATURE SHOWCASE                       -->
+      <!-- ===================================================================== -->
+      <section class="section-split-showcase" id="about-split">
+        <div class="split-banner-container">
+          
+          <!-- Left Side: Terracotta Warm Red Textured Information Column -->
+          <div class="split-col-left">
+            <div class="split-left-inner">
+              <h2 class="split-main-heading">About AURA for Women</h2>
+              <div class="split-underline" aria-hidden="true"></div>
+
+              <div class="split-info-dual-grid">
+                <!-- Why We Help Column -->
+                <div class="split-info-block">
+                  <h3 class="split-sub-title">Why we help</h3>
+                  <p class="split-text">
+                    Women and girls globally need our support and protection, today more than ever. Violence against women remains a prevalent phenomenon, with new forms of violence, such as gender based violence online, increasingly appearing.
+                  </p>
+                </div>
+
+                <!-- Our History Column -->
+                <div class="split-info-block">
+                  <h3 class="split-sub-title">Our history</h3>
+                  <p class="split-text">
+                    AURAforWomen started 15 years ago with a women empowerment unit at a community charity for unemployed teenagers. Today AURAforWomen is located across 14 international hubs and conducts regular human rights trainings and life-saving support for women and girls.
+                  </p>
+                </div>
+              </div>
+
+              <button class="btn btn-split-action" data-modal="volunteerModal" data-interest="About AURA Movement">
+                <span>Read more</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side: Deep Slate Navy with Glowing Vector Constellation Map -->
+          <div class="split-col-right">
+            <div class="constellation-map-wrap">
+              <svg viewBox="0 0 600 600" class="constellation-svg" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#4ECAE0" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#4ECAE0" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Stylized Territory Shape with Glowing Cyber Constellation Network -->
+                <path class="constellation-boundary" d="M300,100 L320,130 L350,140 L370,180 L400,210 L440,220 L480,210 L510,240 L500,280 L460,300 L420,330 L390,380 L360,420 L330,470 L300,520 L270,480 L250,440 L240,390 L210,350 L180,310 L160,260 L180,220 L220,180 L250,150 L270,120 Z" fill="#0c3852" stroke="#2a7b9b" stroke-width="2" />
+
+                <!-- Network Grid Connection Lines -->
+                <g class="network-lines" stroke="#258da6" stroke-width="1.2" opacity="0.65">
+                  <line x1="300" y1="140" x2="330" y2="190" />
+                  <line x1="330" y1="190" x2="280" y2="230" />
+                  <line x1="280" y1="230" x2="350" y2="260" />
+                  <line x1="350" y1="260" x2="410" y2="240" />
+                  <line x1="410" y1="240" x2="460" y2="270" />
+                  <line x1="350" y1="260" x2="320" y2="320" />
+                  <line x1="320" y1="320" x2="240" y2="300" />
+                  <line x1="240" y1="300" x2="210" y2="260" />
+                  <line x1="320" y1="320" x2="360" y2="360" />
+                  <line x1="360" y1="360" x2="300" y2="420" />
+                  <line x1="300" y1="420" x2="280" y2="470" />
+                  <line x1="300" y1="420" x2="330" y2="460" />
+                  <line x1="330" y1="460" x2="300" y2="500" />
+                  <line x1="280" y1="230" x2="240" y2="300" />
+                  <line x1="330" y1="190" x2="370" y2="210" />
+                  <line x1="370" y1="210" x2="410" y2="240" />
+                </g>
+
+                <!-- Glowing Pulse Nodes -->
+                <g class="network-nodes">
+                  <circle cx="300" cy="140" r="4.5" fill="#5ce1e6" />
+                  <circle cx="330" cy="190" r="4.5" fill="#5ce1e6" />
+                  <circle cx="280" cy="230" r="4.5" fill="#5ce1e6" />
+                  <circle cx="350" cy="260" r="5" fill="#5ce1e6" />
+                  <circle cx="410" cy="240" r="4.5" fill="#5ce1e6" />
+                  <circle cx="460" cy="270" r="4" fill="#5ce1e6" />
+                  <circle cx="320" cy="320" r="5.5" fill="#ffffff" />
+                  <circle cx="240" cy="300" r="4" fill="#5ce1e6" />
+                  <circle cx="210" cy="260" r="4.5" fill="#5ce1e6" />
+                  <circle cx="360" cy="360" r="5" fill="#5ce1e6" />
+                  <circle cx="300" cy="420" r="5.5" fill="#ffffff" />
+                  <circle cx="280" cy="470" r="4" fill="#5ce1e6" />
+                  <circle cx="330" cy="460" r="4.5" fill="#5ce1e6" />
+                  <circle cx="300" cy="500" r="5" fill="#5ce1e6" />
+                  <circle cx="370" cy="210" r="4" fill="#5ce1e6" />
+                </g>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 08 — SIGNATURE "ADD IMPACT TO YOUR INBOX" SECTION                     -->
+      <!-- ===================================================================== -->
+      <section class="section-impact-inbox section-padding" id="inbox-signup">
+        <div class="container">
+          <div class="inbox-banner-wrapper">
+            
+            <!-- Left Column: Form & Callout -->
+            <div class="inbox-content-col">
+              <h2 class="inbox-main-title">Add Impact to your Inbox</h2>
+              <p class="inbox-subtitle">
+                Sign up for our monthly newsletter for more on our impact, stories that inspire, events, and updates on our work
+              </p>
+
+              <!-- Exact 3-Field Newsletter Form Requested -->
+              <form class="inbox-subscription-form" id="impactInboxForm">
+                <div class="inbox-inputs-grid">
+                  <!-- First Name -->
+                  <div class="inbox-field-wrap">
+                    <label for="inboxFirstName" class="inbox-label">First Name</label>
+                    <input type="text" id="inboxFirstName" placeholder="" class="inbox-input">
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="inbox-field-wrap">
+                    <label for="inboxLastName" class="inbox-label">Last Name</label>
+                    <input type="text" id="inboxLastName" placeholder="" class="inbox-input">
+                  </div>
+
+                  <!-- Email Address (Required) -->
+                  <div class="inbox-field-wrap">
+                    <label for="inboxEmail" class="inbox-label">Enter your email here <span class="required-star">*</span></label>
+                    <input type="email" id="inboxEmail" required placeholder="" class="inbox-input">
+                  </div>
+
+                  <!-- Sign Up Button -->
+                  <div class="inbox-btn-wrap">
+                    <button type="submit" class="btn btn-inbox-signup">
+                      <span>Sign Up</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right Column: Hand-Painted Polaroid Framed Photograph with Doodles -->
+            <div class="inbox-visual-col">
+              <div class="painted-frame-container">
+                <div class="hand-drawn-doodle doodle-top" aria-hidden="true">
+                  <svg width="60" height="40" viewBox="0 0 60 40" fill="none" stroke="#2baec6" stroke-width="2"><path d="M5,35 Q15,5 30,20 T55,10" /></svg>
+                </div>
+
+                <!-- Hand Painted Polaroid Frame -->
+                <div class="painted-polaroid-box">
+                  <div class="polaroid-inner-img">
+                    <img src="IMAGE/WOMEN (19).jpg" alt="A young woman raising her hand in solidarity and courage" class="polaroid-photo">
+                  </div>
+                </div>
+
+                <div class="hand-drawn-doodle doodle-bottom" aria-hidden="true">
+                  <svg width="45" height="55" viewBox="0 0 45 55" fill="none" stroke="#2baec6" stroke-width="2"><path d="M5,10 L35,5 L40,45 L10,50 Z M15,20 L30,18 M15,30 L28,28" /></svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Decorative dashed bottom border line -->
+          <div class="inbox-dashed-divider" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 09 — PROGRAMS SECTION                                                 -->
+      <!-- ===================================================================== -->
+      <section class="section-programs section-padding text-center" id="programs">
+        <div class="container">
+          <div class="section-header-editorial">
+            <div class="section-tag reveal-fade">
+              <span class="tag-number">09</span>
+              <span class="tag-label">STRUCTURED ACCELERATION</span>
+            </div>
+            <h2 class="section-title reveal-text">Our Signature Programs</h2>
+            <p class="section-desc reveal-fade">
+              Comprehensive curriculums combining experiential learning, zero-interest financial tools, and lifelong peer fellowship.
+            </p>
+          </div>
+
+          <!-- Editorial Program Grid with Unique Images -->
+          <div class="programs-editorial-grid">
+            
+            <!-- Program 1 -->
+            <div class="prog-card reveal-fade">
+              <div class="prog-img-container">
+                <img src="IMAGE/WOMEN (12).jpg" alt="Young women in digital skills laboratory" loading="lazy" class="prog-img">
+                <span class="prog-tag">STEM & Digital</span>
+              </div>
+              <div class="prog-body">
+                <div class="prog-meta">
+                  <span>12-Month Immersion</span>
+                  <span>•</span>
+                  <span>Ages 16–25</span>
+                </div>
+                <h3 class="prog-title">NextGen STEM & Tech Fellowship</h3>
+                <p class="prog-summary">
+                  Full-stack engineering, data science, and renewable energy technicians training with guaranteed employer matching and internship stipends.
+                </p>
+                <ul class="prog-bullets">
+                  <li>Hardware & Laptop provisioning</li>
+                  <li>1-on-1 Senior Engineering Mentorship</li>
+                  <li>Industry recognized certifications</li>
+                </ul>
+                <button class="btn btn-sm btn-outline-plum" data-modal="volunteerModal" data-interest="STEM Fellowship">Enroll or Mentor</button>
+              </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="prog-card reveal-fade">
+              <div class="prog-img-container">
+                <img src="IMAGE/WOMEN (13).jpg" alt="Female entrepreneurs reviewing microfinance plans" loading="lazy" class="prog-img">
+                <span class="prog-tag">Micro-Enterprise</span>
+              </div>
+              <div class="prog-body">
+                <div class="prog-meta">
+                  <span>6-Month Accelerator</span>
+                  <span>•</span>
+                  <span>All Ages</span>
+                </div>
+                <h3 class="prog-title">Micro-Enterprise Launchpad</h3>
+                <p class="prog-summary">
+                  Equipping grassroots artisans, food producers, and local service creators with financial literacy, branding, inventory logistics, and seed funding.
+                </p>
+                <ul class="prog-bullets">
+                  <li>Up to $2,500 non-repayable seed micro-grant</li>
+                  <li>Digital bookkeeping & inventory tools</li>
+                  <li>Regional wholesale marketplace access</li>
+                </ul>
+                <button class="btn btn-sm btn-outline-plum" data-modal="volunteerModal" data-interest="Micro-Enterprise">Support This Cohort</button>
+              </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="prog-card reveal-fade">
+              <div class="prog-img-container">
+                <img src="IMAGE/WOMEN (14).jpg" alt="Executive mentorship workshop session" loading="lazy" class="prog-img">
+                <span class="prog-tag">Leadership</span>
+              </div>
+              <div class="prog-body">
+                <div class="prog-meta">
+                  <span>9-Month Executive Guild</span>
+                  <span>•</span>
+                  <span>Emerging Leaders</span>
+                </div>
+                <h3 class="prog-title">Executive & Civic Mentorship</h3>
+                <p class="prog-summary">
+                  Connecting high-potential women in local government, non-profit leadership, and corporate management with C-suite global mentors.
+                </p>
+                <ul class="prog-bullets">
+                  <li>Public policy negotiation workshops</li>
+                  <li>Media training & public advocacy</li>
+                  <li>Global leadership summit access</li>
+                </ul>
+                <button class="btn btn-sm btn-outline-plum" data-modal="mentorModal">Become a Mentor</button>
+              </div>
+            </div>
+
+            <!-- Program 4 -->
+            <div class="prog-card reveal-fade">
+              <div class="prog-img-container">
+                <img src="IMAGE/WOMEN (16).jpg" alt="Community savings circle and financial planning" loading="lazy" class="prog-img">
+                <span class="prog-tag">Economic Guild</span>
+              </div>
+              <div class="prog-body">
+                <div class="prog-meta">
+                  <span>Ongoing Cooperative</span>
+                  <span>•</span>
+                  <span>Community Wide</span>
+                </div>
+                <h3 class="prog-title">Village Savings & Credit Syndicates</h3>
+                <p class="prog-summary">
+                  Empowering self-managed community banking groups where women pool emergency reserves, invest in member ventures, and insure against emergencies.
+                </p>
+                <ul class="prog-bullets">
+                  <li>Peer-governed interest pools</li>
+                  <li>Emergency medical & family safety nets</li>
+                  <li>100% community-retained wealth</li>
+                </ul>
+                <button class="btn btn-sm btn-outline-plum" data-modal="partnerModal">Partner With Hubs</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 10 — INTERACTIVE IMPACT MAP                                           -->
+      <!-- ===================================================================== -->
+      <section class="section-map section-padding bg-plum text-light text-center" id="impact-map">
+        <div class="container">
+          <div class="section-header-editorial">
+            <div class="section-tag text-accent reveal-fade">
+              <span class="tag-number">10</span>
+              <span class="tag-label">GLOBAL PRESENCE</span>
+            </div>
+            <h2 class="section-title reveal-text">Interactive Community Map</h2>
+            <p class="section-desc reveal-fade">
+              Explore our 86 verified community hubs across 4 core geographical zones. Click pins to inspect real-time metrics and program deployments.
+            </p>
+          </div>
+
+          <!-- Map Filter Buttons -->
+          <div class="map-filter-bar reveal-fade">
+            <button class="map-filter-btn active" data-region="all">All Hubs (86)</button>
+            <button class="map-filter-btn" data-region="east-africa">East Africa (34)</button>
+            <button class="map-filter-btn" data-region="south-asia">South Asia (28)</button>
+            <button class="map-filter-btn" data-region="latin-america">Latin America (16)</button>
+            <button class="map-filter-btn" data-region="southeast-asia">Southeast Asia (8)</button>
+          </div>
+
+          <!-- Interactive SVG Map Canvas & Card Container -->
+          <div class="map-interactive-wrapper reveal-fade">
+            <div class="svg-map-stage" id="svgMapStage">
+              <!-- Stylized World Map Vector Canvas -->
+              <svg viewBox="0 0 1000 500" class="world-svg-map" id="worldMapSvg" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4E2351"/>
+                    <stop offset="100%" stop-color="#2D112F"/>
+                  </linearGradient>
+                  <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#C95C78" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#C95C78" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Stylized Continents Base Path -->
+                <g class="continents-group" fill="#4a224d" stroke="#68336c" stroke-width="0.8" opacity="0.85">
+                  <path d="M120,80 Q160,70 240,75 Q280,120 260,170 Q210,190 190,220 Q160,200 130,160 Q100,120 120,80 Z" />
+                  <path d="M220,240 Q290,240 310,310 Q320,380 270,440 Q240,420 230,350 Q200,280 220,240 Z" />
+                  <path d="M440,70 Q530,60 560,110 Q540,150 480,160 Q440,140 430,100 Z" />
+                  <path d="M440,170 Q540,160 570,230 Q580,330 520,390 Q470,390 440,290 Q420,220 440,170 Z" />
+                  <path d="M570,70 Q750,60 840,140 Q860,240 780,260 Q720,280 670,240 Q620,190 570,140 Z" />
+                  <path d="M640,180 Q700,190 700,270 Q660,310 630,260 Z" />
+                  <path d="M780,260 Q850,260 880,330 Q820,380 770,330 Z" />
+                  <path d="M780,360 Q880,350 890,430 Q800,460 760,400 Z" />
+                </g>
+
+                <!-- Hotspot Pins -->
+                <g class="map-pin-hotspot active" data-id="hub-nairobi" data-region="east-africa" transform="translate(545, 265)">
+                  <circle class="pin-pulse" r="16" fill="url(#pinGlow)" />
+                  <circle class="pin-ring" r="9" fill="none" stroke="#FAF5F0" stroke-width="1.5" />
+                  <circle class="pin-core" r="4.5" fill="#C95C78" />
+                  <text class="pin-label-svg" x="12" y="4">Nairobi Center (18 Hubs)</text>
+                </g>
+                <g class="map-pin-hotspot" data-id="hub-kampala" data-region="east-africa" transform="translate(528, 255)">
+                  <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
+                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <text class="pin-label-svg" x="10" y="3">Great Lakes (16 Hubs)</text>
+                </g>
+                <g class="map-pin-hotspot" data-id="hub-dhaka" data-region="south-asia" transform="translate(695, 215)">
+                  <circle class="pin-pulse" r="16" fill="url(#pinGlow)" />
+                  <circle class="pin-ring" r="9" fill="none" stroke="#FAF5F0" stroke-width="1.5" />
+                  <circle class="pin-core" r="4.5" fill="#C95C78" />
+                  <text class="pin-label-svg" x="12" y="4">Dhaka Tech Guild (16 Hubs)</text>
+                </g>
+                <g class="map-pin-hotspot" data-id="hub-rajasthan" data-region="south-asia" transform="translate(655, 205)">
+                  <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
+                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <text class="pin-label-svg" x="10" y="3">Rajasthan Artisan (12 Hubs)</text>
+                </g>
+                <g class="map-pin-hotspot" data-id="hub-oaxaca" data-region="latin-america" transform="translate(185, 205)">
+                  <circle class="pin-pulse" r="16" fill="url(#pinGlow)" />
+                  <circle class="pin-ring" r="9" fill="none" stroke="#FAF5F0" stroke-width="1.5" />
+                  <circle class="pin-core" r="4.5" fill="#C95C78" />
+                  <text class="pin-label-svg" x="12" y="4">Oaxaca Weavers (10 Hubs)</text>
+                </g>
+                <g class="map-pin-hotspot" data-id="hub-peru" data-region="latin-america" transform="translate(245, 310)">
+                  <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
+                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <text class="pin-label-svg" x="10" y="3">Andean Guild (6 Hubs)</text>
+                </g>
+                <g class="map-pin-hotspot" data-id="hub-manila" data-region="southeast-asia" transform="translate(790, 240)">
+                  <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
+                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <text class="pin-label-svg" x="10" y="3">Visayas Outreach (8 Hubs)</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Community Info Drawer -->
+            <div class="community-info-panel" id="communityInfoPanel">
+              <div class="panel-header">
+                <span class="hub-status-badge">● Active Deployment</span>
+                <span class="hub-id" id="hubIdText">HUB #EA-01</span>
+              </div>
+              <h3 class="panel-title" id="hubTitle">Nairobi Regional Innovation Hub</h3>
+              <p class="panel-desc" id="hubDesc">
+                Focusing on clean energy entrepreneurship and digital finance syndicates. Serving 18 rural satellite micro-centers across the Rift Valley.
+              </p>
+              
+              <div class="panel-stats-row">
+                <div class="p-stat">
+                  <span class="p-stat-val" id="hubGrads">3,420</span>
+                  <span class="p-stat-lbl">Women Enrolled</span>
+                </div>
+                <div class="p-stat">
+                  <span class="p-stat-val" id="hubCap">$460K</span>
+                  <span class="p-stat-lbl">Capital Granted</span>
+                </div>
+                <div class="p-stat">
+                  <span class="p-stat-val" id="hubRate">94%</span>
+                  <span class="p-stat-lbl">Sovereignty Rate</span>
+                </div>
+              </div>
+
+              <div class="panel-programs-tags" id="hubTags">
+                <span class="h-tag">Solar Energy</span>
+                <span class="h-tag">Microfinance</span>
+                <span class="h-tag">Agritech</span>
+              </div>
+
+              <button class="btn btn-sm btn-accent btn-block" data-modal="donateModal">Support This Hub</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 11 — GLOBAL SOLIDARITY IN MOTION (CINEMATIC MARATHON VIDEO SECTION)   -->
+      <!-- ===================================================================== -->
+      <section class="section-solidarity-video" id="community-action">
+        <div class="video-section-bg-wrap">
+          <video class="solidarity-bg-video" autoplay muted loop playsinline poster="IMAGE/WOMEN (15).jpg" id="solidarityVideo">
+            <source src="VIDEOS/120683-721759770_medium.mp4" type="video/mp4">
+          </video>
+          <div class="solidarity-video-overlay"></div>
+        </div>
+
+        <div class="container solidarity-content text-center">
+          <div class="section-tag text-accent reveal-fade">
+            <span class="tag-number">11</span>
+            <span class="tag-label">COMMUNITY MOBILIZATION</span>
+          </div>
+
+          <h2 class="solidarity-title reveal-text">
+            Movement in Action: Global Solidarity 2026
+          </h2>
+
+          <p class="solidarity-desc reveal-fade">
+            Over 3,800 runners, allies, and community champions moving across 14 global cities in solidarity—running to unlock education, health, and economic sovereignty for women everywhere.
+          </p>
+
+          <!-- Highlights Row -->
+          <div class="solidarity-highlights-grid reveal-fade">
+            <div class="s-highlight-item">
+              <span class="s-val">14</span>
+              <span class="s-lbl">Host Cities Worldwide</span>
+            </div>
+            <div class="s-highlight-item">
+              <span class="s-val">3,800+</span>
+              <span class="s-lbl">Active Participants</span>
+            </div>
+            <div class="s-highlight-item">
+              <span class="s-val">$420K+</span>
+              <span class="s-lbl">Scholarship Funds Raised</span>
+            </div>
+            <div class="s-highlight-item">
+              <span class="s-val">100%</span>
+              <span class="s-lbl">Grassroots Deployed</span>
+            </div>
+          </div>
+
+          <div class="solidarity-cta-group reveal-fade">
+            <button class="btn btn-lg btn-accent" data-modal="volunteerModal" data-interest="Global Solidarity Run">
+              <span>Register for 2026 Run</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn btn-lg btn-outline-light" data-modal="donateModal">
+              <span>Sponsor a Community Runner</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 12 — GET INVOLVED SECTION                                             -->
+      <!-- ===================================================================== -->
+      <section class="section-get-involved section-padding bg-cream text-center" id="get-involved">
+        <div class="container">
+          <div class="section-header-editorial text-center">
+            <div class="section-tag reveal-fade">
+              <span class="tag-number">11</span>
+              <span class="tag-label">BE THE CATALYST</span>
+            </div>
+            <h2 class="section-title reveal-text">Four Ways to Stand With Us</h2>
+            <p class="section-desc reveal-fade">
+              Whether you bring financial capital, domain expertise, mentorship hours, or corporate alliances—your participation creates measurable ripples.
+            </p>
+          </div>
+
+          <!-- 4 Strong Action Cards -->
+          <div class="involvement-grid">
+            
+            <!-- Action 1: Donate -->
+            <div class="action-card action-primary reveal-fade">
+              <div class="action-card-top">
+                <div class="action-icon">✦</div>
+                <span class="action-badge">Immediate Direct Impact</span>
+              </div>
+              <h3 class="action-title">Make a Direct Donation</h3>
+              <p class="action-desc">
+                Fund scholarships, seed micro-grants, and vocational training facilities. 100% of public gifts go directly into community-level programs.
+              </p>
+              <div class="action-metrics">
+                <span>$50 funds 1 month of tech schooling</span>
+              </div>
+              <button class="btn btn-primary btn-block" data-modal="donateModal">
+                <span>Donate Securely</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <!-- Action 2: Volunteer -->
+            <div class="action-card reveal-fade">
+              <div class="action-card-top">
+                <div class="action-icon">🌿</div>
+                <span class="action-badge">Field & Remote</span>
+              </div>
+              <h3 class="action-title">Volunteer Your Skills</h3>
+              <p class="action-desc">
+                From curriculum design, web development, translation, legal guidance, and community workshops—lend your craft to grassroots leaders.
+              </p>
+              <div class="action-metrics">
+                <span>Flexible 2–5 hours / week</span>
+              </div>
+              <button class="btn btn-outline-plum btn-block" data-modal="volunteerModal">
+                <span>Join Volunteer Guild</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <!-- Action 3: Mentor -->
+            <div class="action-card reveal-fade">
+              <div class="action-card-top">
+                <div class="action-icon">⭐</div>
+                <span class="action-badge">Executive Level</span>
+              </div>
+              <h3 class="action-title">Become an Executive Mentor</h3>
+              <p class="action-desc">
+                Pair 1-on-1 with an emerging female founder or civic leader for 9 months of strategic mentorship, coaching, and career sponsorship.
+              </p>
+              <div class="action-metrics">
+                <span>1 Session Every Two Weeks</span>
+              </div>
+              <button class="btn btn-outline-plum btn-block" data-modal="mentorModal">
+                <span>Apply as Mentor</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <!-- Action 4: Partner With Us -->
+            <div class="action-card reveal-fade">
+              <div class="action-card-top">
+                <div class="action-icon">🏛️</div>
+                <span class="action-badge">Institutional & Corporate</span>
+              </div>
+              <h3 class="action-title">Partner With Our Alliance</h3>
+              <p class="action-desc">
+                Empower your foundation, university, or corporate ESG strategy with certified, audit-ready grassroots social impact partnerships.
+              </p>
+              <div class="action-metrics">
+                <span>Custom Co-Branded Programs</span>
+              </div>
+              <button class="btn btn-outline-plum btn-block" data-modal="partnerModal">
+                <span>Inquire Alliance</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 12 — FINAL CTA BANNER                                                 -->
+      <!-- ===================================================================== -->
+      <section class="section-final-cta" id="final-cta">
+        <div class="cta-bg-wrapper">
+          <img src="IMAGE/WOMEN (20).jpg" alt="A courageous young woman looking towards the horizon" class="cta-bg-img">
+          <div class="cta-plum-gradient"></div>
+        </div>
+
+        <div class="container cta-content text-center">
+          <span class="cta-tag reveal-fade">✦ A COMMITMENT TO THE NEXT CENTURY</span>
+          <h2 class="cta-headline reveal-text">
+            “Her Future Is Our Future.”
+          </h2>
+          <p class="cta-subheading reveal-fade">
+            Join thousands of advocates around the world funding the education, autonomy, and sovereignty of women leading tomorrow.
+          </p>
+          
+          <div class="cta-actions reveal-fade">
+            <button class="btn btn-xl btn-accent" data-modal="donateModal">
+              <span>Donate Now — Transform Lives</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn btn-xl btn-glass" data-modal="partnerModal">
+              <span>Explore Strategic Partnerships</span>
+            </button>
+          </div>
+
+          <div class="cta-guarantee reveal-fade">
+            <span>🔒 501(c)(3) Certified Non-Profit Organization • Tax Deductible Worldwide</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 13 — FOOTER                                                           -->
+      <!-- ===================================================================== -->
+      <footer class="site-footer bg-plum text-light text-center" id="footer">
+        <div class="container">
+          <div class="footer-top-grid">
+            
+            <!-- Col 1: Brand & Mission summary -->
+            <div class="footer-col footer-col-brand">
+              <a href="#hero" class="brand-logo footer-logo">
+                <span class="logo-symbol">✦</span>
+                <div class="logo-text">
+                  <span class="logo-main">AURA</span>
+                  <span class="logo-sub">Women Empowerment</span>
+                </div>
+              </a>
+              <p class="footer-mission-statement">
+                A global grassroots alliance committed to dismantling systemic inequality through sovereign education, micro-capital, and lifelong mentorship.
+              </p>
+              <div class="footer-tax-info">
+                <span>Registered 501(c)(3) Global Non-Profit</span>
+                <span>EIN: 84-2940291 • Audited Annually</span>
+              </div>
+            </div>
+
+            <!-- Col 2: Navigation Links -->
+            <div class="footer-col">
+              <h4 class="footer-heading">Initiatives</h4>
+              <ul class="footer-nav-list">
+                <li><a href="#mission">Our Core Mission</a></li>
+                <li><a href="#what-we-do">Four Transformative Pillars</a></li>
+                <li><a href="#news">Latest News & Dispatches</a></li>
+                <li><a href="#about-split">About Our Movement</a></li>
+                <li><a href="#programs">STEM Fellowship</a></li>
+                <li><a href="#impact-map">Global Community Hubs</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Take Action Links -->
+            <div class="footer-col">
+              <h4 class="footer-heading">Take Action</h4>
+              <ul class="footer-nav-list">
+                <li><a href="javascript:void(0)" data-modal="donateModal">Make a Tax-Deductible Gift</a></li>
+                <li><a href="javascript:void(0)" data-modal="volunteerModal">Join as a Volunteer</a></li>
+                <li><a href="javascript:void(0)" data-modal="mentorModal">Become an Executive Mentor</a></li>
+                <li><a href="javascript:void(0)" data-modal="partnerModal">Institutional Partnerships</a></li>
+                <li><a href="#impact">Audited Impact Reports</a></li>
+                <li><a href="#inbox-signup">Join Impact Dispatch</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Newsletter & Socials -->
+            <div class="footer-col footer-col-newsletter">
+              <h4 class="footer-heading">Join the Dispatch</h4>
+              <p class="footer-newsletter-copy">
+                Receive quarterly audited impact briefings, inspiring alumni chronicles, and invitations to global summits.
+              </p>
+
+              <form class="footer-newsletter-form" id="newsletterForm">
+                <div class="input-with-button">
+                  <input type="email" id="newsletterEmail" placeholder="Enter your email address" required class="editorial-input">
+                  <button type="submit" class="btn-submit-arrow" aria-label="Subscribe to newsletter">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+                <span class="newsletter-privacy">We respect your privacy. Unsubscribe anytime with one click.</span>
+              </form>
+
+              <div class="footer-socials">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter / X">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Copyright & Legal Sub-footer -->
+          <div class="footer-bottom-bar">
+            <p class="copyright-text">
+              © 2026 AURA Women Empowerment Organization. All rights reserved. Crafted with care for global equity.
+            </p>
+            <div class="footer-legal-links">
+              <a href="#">Privacy Policy</a>
+              <span>•</span>
+              <a href="#">Terms of Service</a>
+              <span>•</span>
+              <a href="#">Financial Transparency</a>
+              <span>•</span>
+              <a href="#">Safeguarding Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: DONATION WORKFLOW                                                  -->
+  <!-- ========================================================================= -->
+  <div class="modal-backdrop" id="donateModal" aria-hidden="true" role="dialog" aria-labelledby="donateModalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close donation modal">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-tag">✦ TAX-DEDUCTIBLE CONTRIBUTION</span>
+        <h3 class="modal-title" id="donateModalTitle">Invest in a Woman's Future</h3>
+        <p class="modal-subtitle">100% of your donation is deployed straight to community hubs and micro-grant recipients.</p>
+      </div>
+
+      <div class="donation-form-wrapper">
+        <div class="freq-toggle-group">
+          <button type="button" class="freq-btn active" data-freq="monthly">Monthly Support (Recommended)</button>
+          <button type="button" class="freq-btn" data-freq="once">One-Time Gift</button>
+        </div>
+
+        <div class="amount-presets-grid">
+          <button type="button" class="amount-btn" data-val="25">$25</button>
+          <button type="button" class="amount-btn active" data-val="50">$50</button>
+          <button type="button" class="amount-btn" data-val="100">$100</button>
+          <button type="button" class="amount-btn" data-val="250">$250</button>
+        </div>
+
+        <div class="custom-amount-wrapper">
+          <span class="currency-symbol">$</span>
+          <input type="number" id="customAmountInput" class="custom-amount-input" placeholder="Other amount (USD)" min="5" value="50">
+        </div>
+
+        <div class="impact-dynamic-feedback" id="impactDynamicFeedback">
+          <span class="feedback-icon">💡</span>
+          <span id="feedbackMessage">Your $50 monthly contribution fully funds 1 woman's vocational STEM scholarship and hardware access.</span>
+        </div>
+
+        <form class="donor-info-form" id="donorCheckoutForm">
+          <div class="form-row-dual">
+            <div class="form-group">
+              <label for="donorFirstName">First Name</label>
+              <input type="text" id="donorFirstName" required placeholder="Elena" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="donorLastName">Last Name</label>
+              <input type="text" id="donorLastName" required placeholder="Vance" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="donorEmail">Email Address</label>
+            <input type="email" id="donorEmail" required placeholder="elena@example.com" class="form-input">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <span id="submitDonateLabel">Donate $50 Monthly</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <div class="secure-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>256-Bit SSL Encrypted & Non-Profit Verified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: VOLUNTEER / MENTOR / PARTNER FORM                                  -->
+  <!-- ========================================================================= -->
+  <div class="modal-backdrop" id="genericActionModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close dialog">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-tag" id="genericModalTag">✦ JOIN THE MOVEMENT</span>
+        <h3 class="modal-title" id="genericModalTitle">Get Involved</h3>
+        <p class="modal-subtitle" id="genericModalSubtitle">Share your expertise and passion with our global community.</p>
+      </div>
+
+      <form class="action-form" id="genericActionForm">
+        <input type="hidden" id="actionFormType" value="volunteer">
+        
+        <div class="form-row-dual">
+          <div class="form-group">
+            <label for="actionName">Full Name</label>
+            <input type="text" id="actionName" required placeholder="Dr. Sarah Jenkins" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="actionEmail">Email Address</label>
+            <input type="email" id="actionEmail" required placeholder="sarah@domain.org" class="form-input">
+          </div>
+        </div>
+
+        <div class="form-row-dual">
+          <div class="form-group">
+            <label for="actionLocation">City / Country</label>
+            <input type="text" id="actionLocation" placeholder="London, United Kingdom" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="actionExpertise">Area of Expertise / Focus</label>
+            <select id="actionExpertise" class="form-input">
+              <option value="tech">Technology & Software Mentorship</option>
+              <option value="finance">Microfinance & Business Strategy</option>
+              <option value="legal">Legal Advocacy & Human Rights</option>
+              <option value="education">Curriculum & Education Training</option>
+              <option value="corporate">Corporate Alliance / ESG</option>
+              <option value="general">General Grassroots Volunteer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="actionMessage">Brief Introduction / Experience</label>
+          <textarea id="actionMessage" rows="3" placeholder="Tell us how you would like to collaborate..." class="form-input"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">
+          <span>Submit Application</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <div class="toast-body">
+      <h5 class="toast-title" id="toastTitle">Thank You!</h5>
+      <p class="toast-msg" id="toastMsg">Your submission has been received.</p>
+    </div>
+  </div>
+
+  <!-- CDN Dependencies -->
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Swiper 11 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Three.js for Hero Organic Ambient Effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Main Application Logic -->
+  <script src="main.js"></script>
+</body>
+</html>
