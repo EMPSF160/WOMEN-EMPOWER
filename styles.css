@@ -1891,13 +1891,15 @@ ul, ol {
 }
 
 /* ==========================================================================
-   07 — SIGNATURE DUAL-TONE SPLIT FEATURE SHOWCASE (IMAGE 2 DESIGN)
+   07 — SIGNATURE DUAL-TONE SPLIT FEATURE SHOWCASE (ALIGNED WITH BRAND PALETTE)
    ========================================================================== */
 
 .section-split-showcase {
   width: 100%;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .split-banner-container {
@@ -1907,19 +1909,20 @@ ul, ol {
   width: 100%;
 }
 
-/* Left Terracotta Column */
+/* Left Deep Plum Column */
 .split-col-left {
-  background-color: var(--color-split-terra);
-  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 0);
-  background-size: 16px 16px;
-  color: #FFFFFF;
-  padding: 4rem 3.5rem;
+  background-color: var(--color-primary);
+  background-image: radial-gradient(rgba(201, 92, 120, 0.15) 1.5px, transparent 0);
+  background-size: 20px 20px;
+  color: var(--color-text-light);
+  padding: 4.5rem 3.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
+  position: relative;
 }
 
 .split-left-inner {
@@ -1932,25 +1935,26 @@ ul, ol {
 
 .split-main-heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
-  font-weight: 700;
-  color: #FFFFFF;
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-weight: 600;
+  color: #FAF5F0;
   margin-bottom: 0.5rem;
   text-align: center;
+  letter-spacing: -0.01em;
 }
 
 .split-underline {
-  width: 140px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.4);
-  margin: 0.5rem auto 2.25rem;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+  margin: 0.75rem auto 2.25rem;
 }
 
 .split-info-dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -1962,45 +1966,48 @@ ul, ol {
 }
 
 .split-sub-title {
-  font-family: var(--font-sans);
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #FFFFFF;
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  color: var(--color-accent);
   margin-bottom: 0.875rem;
   text-align: center;
 }
 
 .split-text {
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.84375rem;
+  line-height: 1.65;
+  color: var(--color-text-light-muted);
   text-align: center;
 }
 
 .btn-split-action {
-  background-color: #0A3347;
-  color: #FFFFFF;
-  min-height: 44px;
-  padding: 0.65rem 1.75rem;
-  border-radius: var(--radius-xs);
+  background-color: var(--color-accent);
+  color: #FAF5F0;
+  min-height: 46px;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
   font-size: 0.875rem;
   font-weight: 600;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: all var(--transition-fast);
   align-self: center;
+  box-shadow: 0 4px 18px rgba(201, 92, 120, 0.35);
 }
 
 .btn-split-action:hover {
-  background-color: #062230;
+  background-color: var(--color-accent-hover);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 92, 120, 0.5);
 }
 
-/* Right Slate Navy Constellation Column */
+/* Right Deep Velvet Midnight Plum Column */
 .split-col-right {
-  background-color: var(--color-split-navy);
+  background-color: var(--color-primary-dark);
+  background-image: radial-gradient(circle at 50% 50%, rgba(201, 92, 120, 0.12) 0%, transparent 70%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 3.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -2016,15 +2023,18 @@ ul, ol {
 .constellation-svg {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 15px rgba(78, 202, 224, 0.25));
+  filter: drop-shadow(0 0 20px rgba(201, 92, 120, 0.35));
 }
 
 .constellation-boundary {
+  fill: #3e1941;
+  stroke: #C95C78;
+  stroke-width: 1.5;
   transition: fill var(--transition-medium);
 }
 
 .constellation-svg:hover .constellation-boundary {
-  fill: #0e4363;
+  fill: #4d2050;
 }
 
 /* ==========================================================================
