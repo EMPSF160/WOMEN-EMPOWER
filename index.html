@@ -89,19 +89,22 @@
       </div>
 
       <ul class="drawer-nav">
-        <li><a href="#hero" class="drawer-link active"><span class="drawer-num">01</span><span class="drawer-label">Home</span></a></li>
-        <li><a href="#mission" class="drawer-link"><span class="drawer-num">02</span><span class="drawer-label">Mission</span></a></li>
-        <li><a href="#what-we-do" class="drawer-link"><span class="drawer-num">03</span><span class="drawer-label">What We Do</span></a></li>
-        <li><a href="#impact" class="drawer-link"><span class="drawer-num">04</span><span class="drawer-label">Impact</span></a></li>
-        <li><a href="#stories" class="drawer-link"><span class="drawer-num">05</span><span class="drawer-label">Stories</span></a></li>
-        <li><a href="#news" class="drawer-link"><span class="drawer-num">06</span><span class="drawer-label">Latest News</span></a></li>
-        <li><a href="#programs" class="drawer-link"><span class="drawer-num">07</span><span class="drawer-label">Programs</span></a></li>
-        <li><a href="#impact-map" class="drawer-link"><span class="drawer-num">08</span><span class="drawer-label">Global Reach</span></a></li>
-        <li><a href="#get-involved" class="drawer-link"><span class="drawer-num">09</span><span class="drawer-label">Get Involved</span></a></li>
+        <li><a href="#hero" class="drawer-link active"><span class="drawer-num">01</span><span class="drawer-label">Home</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#mission" class="drawer-link"><span class="drawer-num">02</span><span class="drawer-label">Mission</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#what-we-do" class="drawer-link"><span class="drawer-num">03</span><span class="drawer-label">What We Do</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#impact" class="drawer-link"><span class="drawer-num">04</span><span class="drawer-label">Impact</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#stories" class="drawer-link"><span class="drawer-num">05</span><span class="drawer-label">Stories</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#news" class="drawer-link"><span class="drawer-num">06</span><span class="drawer-label">Latest News</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#programs" class="drawer-link"><span class="drawer-num">07</span><span class="drawer-label">Programs</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#impact-map" class="drawer-link"><span class="drawer-num">08</span><span class="drawer-label">Global Reach</span><span class="drawer-arrow">→</span></a></li>
+        <li><a href="#get-involved" class="drawer-link"><span class="drawer-num">09</span><span class="drawer-label">Get Involved</span><span class="drawer-arrow">→</span></a></li>
       </ul>
 
       <div class="drawer-footer">
-        <button class="btn btn-primary btn-block btn-lg" data-modal="donateModal">Make a Donation</button>
+        <button class="btn btn-pill btn-accent btn-block btn-lg drawer-donate-btn" data-modal="donateModal">
+          <span>Donate Now</span>
+          <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
         <div class="drawer-contact-mini">
           <span>contact@aura-empowerment.org</span>
           <span>Global Social Impact Initiative</span>
@@ -1480,8 +1483,8 @@
   <!-- ========================================================================= -->
   <!-- MODAL: DONATION WORKFLOW                                                  -->
   <!-- ========================================================================= -->
-  <div class="modal-backdrop" id="donateModal" aria-hidden="true" role="dialog" aria-labelledby="donateModalTitle">
-    <div class="modal-card">
+  <div class="modal-backdrop" id="donateModal" data-lenis-prevent aria-hidden="true" role="dialog" aria-labelledby="donateModalTitle">
+    <div class="modal-card" data-lenis-prevent>
       <button class="modal-close-btn" aria-label="Close donation modal">✕</button>
       
       <div class="modal-header">
@@ -1547,8 +1550,8 @@
   <!-- ========================================================================= -->
   <!-- MODAL: VOLUNTEER / MENTOR / PARTNER FORM                                  -->
   <!-- ========================================================================= -->
-  <div class="modal-backdrop" id="genericActionModal" aria-hidden="true" role="dialog">
-    <div class="modal-card">
+  <div class="modal-backdrop" id="genericActionModal" data-lenis-prevent aria-hidden="true" role="dialog">
+    <div class="modal-card" data-lenis-prevent>
       <button class="modal-close-btn" aria-label="Close dialog">✕</button>
       
       <div class="modal-header">

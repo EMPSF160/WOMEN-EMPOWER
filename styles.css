@@ -849,26 +849,26 @@ ul, ol {
 .drawer-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  margin-top: 0.875rem;
-  margin-bottom: auto;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   align-items: center;
   width: 100%;
-  max-width: 290px;
+  max-width: 320px;
 }
 
 .drawer-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 0.75rem;
   width: 100%;
-  padding: 0.35rem 0.875rem;
+  padding: 0.45rem 1rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   color: var(--color-text-light);
   transition: all var(--transition-fast);
   box-sizing: border-box;
@@ -876,27 +876,43 @@ ul, ol {
 
 .drawer-num {
   font-family: var(--font-sans);
-  font-size: 0.625rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  color: var(--color-accent);
-  background: rgba(201, 92, 120, 0.15);
-  padding: 0.15rem 0.4rem;
+  color: #FF8BA7;
+  background: rgba(201, 92, 120, 0.2);
+  padding: 0.18rem 0.5rem;
   border-radius: var(--radius-full);
-  min-width: 24px;
+  min-width: 26px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .drawer-label {
-  font-size: 0.9375rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   letter-spacing: 0.02em;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.drawer-arrow {
+  font-size: 0.875rem;
+  color: rgba(250, 245, 240, 0.4);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .drawer-link:hover, .drawer-link.active {
   background: rgba(201, 92, 120, 0.28);
-  border-color: rgba(255, 112, 150, 0.55);
+  border-color: rgba(255, 112, 150, 0.6);
   color: #FFFFFF;
   transform: translateX(3px);
-  box-shadow: 0 0 14px rgba(201, 92, 120, 0.35);
+  box-shadow: 0 0 16px rgba(201, 92, 120, 0.4);
+}
+
+.drawer-link:hover .drawer-arrow, .drawer-link.active .drawer-arrow {
+  color: #FF8BA7;
+  transform: translateX(2px);
 }
 
 .drawer-link.active .drawer-num {
@@ -906,24 +922,43 @@ ul, ol {
 
 .drawer-footer {
   width: 100%;
-  max-width: 290px;
-  margin-top: 0.875rem;
-  padding-top: 0.875rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 320px;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
 }
 
-.drawer-footer .btn {
-  min-height: 42px;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.875rem;
+.drawer-donate-btn {
+  background: linear-gradient(135deg, #FF7096 0%, #C95C78 100%) !important;
+  color: #FAF5F0 !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  min-height: 46px !important;
+  border-radius: var(--radius-full) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(201, 92, 120, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.625rem !important;
+  width: 100% !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.drawer-donate-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 28px rgba(201, 92, 120, 0.75) !important;
+  background: linear-gradient(135deg, #ff8ba7 0%, #d85473 100%) !important;
 }
 
 .drawer-contact-mini {
-  margin-top: 0.5rem;
+  margin-top: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
@@ -3399,22 +3434,25 @@ ul, ol {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(42, 15, 43, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 3000;
+  background: rgba(30, 9, 32, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 99999;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 2.5rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5rem 1rem 4rem;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.35s ease, visibility 0.35s ease;
   width: 100vw;
   height: 100vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain;
   box-sizing: border-box;
 }
 
@@ -3429,21 +3467,31 @@ ul, ol {
   border-radius: var(--radius-lg);
   max-width: 520px;
   width: 100%;
-  margin: auto;
+  margin: 1.5rem auto 3rem;
   padding: 2.25rem 2rem;
   position: relative;
-  box-shadow: var(--shadow-elevated);
-  transform: scale(0.94) translateY(20px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96) translateY(15px);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  flex-shrink: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  touch-action: pan-y !important;
 }
 
 .modal-backdrop.active .modal-card {
   transform: scale(1) translateY(0);
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 .modal-close-btn {
@@ -4050,12 +4098,15 @@ ul, ol {
   }
 
   .modal-backdrop {
-    padding: 1.25rem 0.625rem;
+    padding: 1.25rem 0.625rem 3.5rem !important;
   }
 
   .modal-card {
-    padding: 1.5rem 1rem;
-    border-radius: var(--radius-md);
+    padding: 1.5rem 1rem !important;
+    margin: 0.5rem auto 2.5rem !important;
+    border-radius: var(--radius-md) !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   .amount-presets-grid {

@@ -685,12 +685,19 @@ function initImpactMap() {
    11. MODAL WORKFLOWS (Donate & Generic Application)
    ========================================================================== */
 function openModal(modalId) {
-  const modal = document.getElementById(modalId);
+  const modal = typeof modalId === 'string' ? document.getElementById(modalId) : modalId;
   if (!modal) return;
+
+  // Automatically close mobile menu if open
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  if (mobileDrawer && mobileDrawer.classList.contains('active')) {
+    toggleMobileMenu(false);
+  }
+
   modal.scrollTop = 0;
   modal.classList.add('active');
   modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('modal-open');
   if (lenis) lenis.stop();
 }
 
@@ -698,7 +705,7 @@ function closeModal(modal) {
   if (!modal) return;
   modal.classList.remove('active');
   modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+  document.body.classList.remove('modal-open');
   if (lenis) lenis.start();
 }
 
@@ -750,6 +757,10 @@ function initModals() {
         closeModal(modal);
       }
     });
+
+    // Ensure native touch/wheel scrolling works freely inside modal
+    modal.addEventListener('wheel', (e) => e.stopPropagation(), { passive: true });
+    modal.addEventListener('touchmove', (e) => e.stopPropagation(), { passive: true });
   });
 
   // Escape Key Close
