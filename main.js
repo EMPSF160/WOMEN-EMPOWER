@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLenis();
   initCustomCursor();
   initHeader();
+  initScrollSpy();
   initMobileDrawer();
   initThreeHero();
   initGSAPAnimations();
@@ -125,6 +126,83 @@ function initHeader() {
 }
 
 /* ==========================================================================
+   03b. ACTIVE NAVBAR SCROLL SPY & HIGHLIGHTING
+   ========================================================================== */
+function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const desktopNavLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  const drawerLinks = document.querySelectorAll('.drawer-nav .drawer-link');
+
+  function updateActiveState() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    let currentSectionId = '';
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 160;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute('id');
+      }
+    });
+
+    // Handle top of page / hero
+    if (scrollPosition < 200) {
+      currentSectionId = 'hero';
+    }
+
+    // Handle bottom of page
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+      const lastSection = sections[sections.length - 1];
+      if (lastSection) currentSectionId = lastSection.getAttribute('id');
+    }
+
+    if (!currentSectionId) return;
+
+    desktopNavLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href === `#${currentSectionId}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    drawerLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href === `#${currentSectionId}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveState, { passive: true });
+  window.addEventListener('resize', updateActiveState, { passive: true });
+  
+  if (typeof lenis !== 'undefined' && lenis) {
+    lenis.on('scroll', updateActiveState);
+  }
+
+  // Initial call
+  setTimeout(updateActiveState, 150);
+
+  // Instant response on click
+  document.querySelectorAll('.nav-link, .drawer-link').forEach((link) => {
+    link.addEventListener('click', function () {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        desktopNavLinks.forEach((l) => l.classList.remove('active'));
+        drawerLinks.forEach((l) => l.classList.remove('active'));
+        document.querySelectorAll(`.nav-link[href="${href}"], .drawer-link[href="${href}"]`).forEach((l) => {
+          l.classList.add('active');
+        });
+      }
+    });
+  });
+}
+
+/* ==========================================================================
    04. FULLSCREEN MOBILE DRAWER
    ========================================================================== */
 function toggleMobileMenu(open) {
@@ -133,6 +211,7 @@ function toggleMobileMenu(open) {
   if (!drawer || !hamburger) return;
 
   if (open) {
+    drawer.scrollTop = 0;
     drawer.classList.add('active');
     drawer.setAttribute('aria-hidden', 'false');
     hamburger.setAttribute('aria-expanded', 'true');
@@ -141,8 +220,8 @@ function toggleMobileMenu(open) {
 
     if (typeof gsap !== 'undefined') {
       gsap.fromTo('.drawer-link', 
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, stagger: 0.06, duration: 0.5, ease: 'power3.out', delay: 0.1 }
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, stagger: 0.04, duration: 0.4, ease: 'power3.out', delay: 0.05 }
       );
     }
   } else {
@@ -608,6 +687,7 @@ function initImpactMap() {
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) return;
+  modal.scrollTop = 0;
   modal.classList.add('active');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';

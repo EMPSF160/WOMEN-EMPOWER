@@ -78,23 +78,26 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="drawer-inner">
       <div class="drawer-header">
-        <div class="drawer-brand">
+        <a href="#hero" class="brand-logo drawer-brand" aria-label="Women Empowerment Organization Home">
           <span class="logo-symbol">✦</span>
-          <span>AURA Organization</span>
-        </div>
+          <div class="logo-text">
+            <span class="logo-main">AURA</span>
+            <span class="logo-sub">Women Empowerment</span>
+          </div>
+        </a>
         <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">✕</button>
       </div>
 
       <ul class="drawer-nav">
-        <li><a href="#hero" class="drawer-link"><span class="drawer-num">01</span><span>Home</span></a></li>
-        <li><a href="#mission" class="drawer-link"><span class="drawer-num">02</span><span>Our Mission</span></a></li>
-        <li><a href="#what-we-do" class="drawer-link"><span class="drawer-num">03</span><span>What We Do</span></a></li>
-        <li><a href="#impact" class="drawer-link"><span class="drawer-num">04</span><span>Measurable Impact</span></a></li>
-        <li><a href="#stories" class="drawer-link"><span class="drawer-num">05</span><span>Stories of Change</span></a></li>
-        <li><a href="#news" class="drawer-link"><span class="drawer-num">06</span><span>Latest News</span></a></li>
-        <li><a href="#programs" class="drawer-link"><span class="drawer-num">07</span><span>Programs</span></a></li>
-        <li><a href="#impact-map" class="drawer-link"><span class="drawer-num">08</span><span>Impact Map</span></a></li>
-        <li><a href="#get-involved" class="drawer-link"><span class="drawer-num">09</span><span>Get Involved</span></a></li>
+        <li><a href="#hero" class="drawer-link active"><span class="drawer-num">01</span><span class="drawer-label">Home</span></a></li>
+        <li><a href="#mission" class="drawer-link"><span class="drawer-num">02</span><span class="drawer-label">Mission</span></a></li>
+        <li><a href="#what-we-do" class="drawer-link"><span class="drawer-num">03</span><span class="drawer-label">What We Do</span></a></li>
+        <li><a href="#impact" class="drawer-link"><span class="drawer-num">04</span><span class="drawer-label">Impact</span></a></li>
+        <li><a href="#stories" class="drawer-link"><span class="drawer-num">05</span><span class="drawer-label">Stories</span></a></li>
+        <li><a href="#news" class="drawer-link"><span class="drawer-num">06</span><span class="drawer-label">Latest News</span></a></li>
+        <li><a href="#programs" class="drawer-link"><span class="drawer-num">07</span><span class="drawer-label">Programs</span></a></li>
+        <li><a href="#impact-map" class="drawer-link"><span class="drawer-num">08</span><span class="drawer-label">Global Reach</span></a></li>
+        <li><a href="#get-involved" class="drawer-link"><span class="drawer-num">09</span><span class="drawer-label">Get Involved</span></a></li>
       </ul>
 
       <div class="drawer-footer">
@@ -1013,68 +1016,104 @@
           <!-- Interactive SVG Map Canvas & Card Container -->
           <div class="map-interactive-wrapper reveal-fade">
             <div class="svg-map-stage" id="svgMapStage">
-              <!-- Stylized World Map Vector Canvas -->
+              <!-- High-Fidelity Geographic World Map Vector Canvas -->
               <svg viewBox="0 0 1000 500" class="world-svg-map" id="worldMapSvg" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <linearGradient id="mapContinentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#4E2351"/>
-                    <stop offset="100%" stop-color="#2D112F"/>
+                    <stop offset="100%" stop-color="#341437"/>
                   </linearGradient>
                   <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#C95C78" stop-opacity="0.9"/>
+                    <stop offset="0%" stop-color="#FF7096" stop-opacity="0.95"/>
                     <stop offset="100%" stop-color="#C95C78" stop-opacity="0"/>
                   </radialGradient>
                 </defs>
 
-                <!-- Stylized Continents Base Path -->
-                <g class="continents-group" fill="#4a224d" stroke="#68336c" stroke-width="0.8" opacity="0.85">
-                  <path d="M120,80 Q160,70 240,75 Q280,120 260,170 Q210,190 190,220 Q160,200 130,160 Q100,120 120,80 Z" />
-                  <path d="M220,240 Q290,240 310,310 Q320,380 270,440 Q240,420 230,350 Q200,280 220,240 Z" />
-                  <path d="M440,70 Q530,60 560,110 Q540,150 480,160 Q440,140 430,100 Z" />
-                  <path d="M440,170 Q540,160 570,230 Q580,330 520,390 Q470,390 440,290 Q420,220 440,170 Z" />
-                  <path d="M570,70 Q750,60 840,140 Q860,240 780,260 Q720,280 670,240 Q620,190 570,140 Z" />
-                  <path d="M640,180 Q700,190 700,270 Q660,310 630,260 Z" />
-                  <path d="M780,260 Q850,260 880,330 Q820,380 770,330 Z" />
-                  <path d="M780,360 Q880,350 890,430 Q800,460 760,400 Z" />
+                <!-- Subtle Lat/Long Grid Matrix Lines -->
+                <g class="map-grid-lines" stroke="rgba(201, 92, 120, 0.12)" stroke-width="0.75" stroke-dasharray="3,5">
+                  <line x1="0" y1="125" x2="1000" y2="125" />
+                  <line x1="0" y1="250" x2="1000" y2="250" />
+                  <line x1="0" y1="375" x2="1000" y2="375" />
+                  <line x1="200" y1="0" x2="200" y2="500" />
+                  <line x1="400" y1="0" x2="400" y2="500" />
+                  <line x1="600" y1="0" x2="600" y2="500" />
+                  <line x1="800" y1="0" x2="800" y2="500" />
                 </g>
 
-                <!-- Hotspot Pins -->
-                <g class="map-pin-hotspot active" data-id="hub-nairobi" data-region="east-africa" transform="translate(545, 265)">
+                <!-- Realistic Geographic Continents -->
+                <g class="continents-group" fill="url(#mapContinentGrad)" stroke="#743378" stroke-width="0.85" opacity="0.95">
+                  <!-- North America (Alaska, Canada, USA, Mexico, Central America) -->
+                  <path d="M 68,62 L 95,52 L 138,45 L 180,48 L 225,58 L 260,78 L 272,112 L 255,135 L 285,152 L 270,185 L 242,192 L 222,238 L 195,218 L 175,230 L 158,208 L 135,200 L 112,175 L 85,155 L 72,118 L 52,98 Z M 215,92 L 235,88 L 245,108 L 225,112 Z M 278,212 L 295,222 L 282,238 L 268,228 Z" class="continent-path" />
+                  
+                  <!-- Greenland -->
+                  <path d="M 315,35 L 362,32 L 385,55 L 360,95 L 322,88 L 312,58 Z" class="continent-path" />
+
+                  <!-- South America (Colombia, Brazil, Peru, Chile, Argentina) -->
+                  <path d="M 235,248 L 278,245 L 325,272 L 345,308 L 332,348 L 305,385 L 285,432 L 268,458 L 255,422 L 248,368 L 232,322 L 225,282 Z M 268,465 L 278,472 L 265,475 Z" class="continent-path" />
+
+                  <!-- Europe (UK, Scandinavia, Western Europe, Mediterranean, Eastern Europe) -->
+                  <path d="M 445,68 L 478,58 L 512,65 L 532,92 L 525,128 L 498,142 L 485,162 L 452,158 L 438,135 L 442,98 Z M 428,88 L 442,82 L 440,108 L 426,112 Z M 468,42 L 482,38 L 488,68 L 472,75 Z" class="continent-path" />
+
+                  <!-- Africa (North Africa, West Africa, Horn of Africa, Southern Africa, Madagascar) -->
+                  <path d="M 445,178 L 495,172 L 542,192 L 575,232 L 565,275 L 545,328 L 525,378 L 495,388 L 478,358 L 468,302 L 438,272 L 428,225 L 435,195 Z M 575,322 L 588,318 L 592,358 L 578,368 Z" class="continent-path" />
+
+                  <!-- Asia (Middle East, Russia, South Asia/India, China, East Asia, SE Asia) -->
+                  <path d="M 535,95 L 612,78 L 715,72 L 825,85 L 865,118 L 845,168 L 795,188 L 765,232 L 725,248 L 685,272 L 652,242 L 625,212 L 585,218 L 558,185 L 548,138 Z M 832,158 L 845,152 L 848,182 L 835,188 Z M 855,142 L 868,138 L 865,165 Z M 768,262 L 792,268 L 782,295 L 758,285 Z M 812,282 L 842,295 L 828,315 L 798,308 Z" class="continent-path" />
+
+                  <!-- Australia & New Zealand -->
+                  <path d="M 788,355 L 845,348 L 885,378 L 872,428 L 822,438 L 778,412 L 775,378 Z M 892,425 L 908,438 L 898,458 Z M 842,448 L 855,455 L 848,462 Z" class="continent-path" />
+                </g>
+
+                <!-- Interactive Hotspot Pins (Accurately Located Geographically) -->
+                <!-- 1. Nairobi Center, Kenya (East Africa) -->
+                <g class="map-pin-hotspot active" data-id="hub-nairobi" data-region="east-africa" transform="translate(555, 272)">
                   <circle class="pin-pulse" r="16" fill="url(#pinGlow)" />
                   <circle class="pin-ring" r="9" fill="none" stroke="#FAF5F0" stroke-width="1.5" />
-                  <circle class="pin-core" r="4.5" fill="#C95C78" />
+                  <circle class="pin-core" r="4.5" fill="#FF7096" />
                   <text class="pin-label-svg" x="12" y="4">Nairobi Center (18 Hubs)</text>
                 </g>
-                <g class="map-pin-hotspot" data-id="hub-kampala" data-region="east-africa" transform="translate(528, 255)">
+
+                <!-- 2. Kampala / Great Lakes, Uganda (East Africa) -->
+                <g class="map-pin-hotspot" data-id="hub-kampala" data-region="east-africa" transform="translate(538, 262)">
                   <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
-                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <circle class="pin-core" r="4" fill="#FF7096" />
                   <text class="pin-label-svg" x="10" y="3">Great Lakes (16 Hubs)</text>
                 </g>
-                <g class="map-pin-hotspot" data-id="hub-dhaka" data-region="south-asia" transform="translate(695, 215)">
+
+                <!-- 3. Dhaka Tech Guild, Bangladesh (South Asia) -->
+                <g class="map-pin-hotspot" data-id="hub-dhaka" data-region="south-asia" transform="translate(712, 224)">
                   <circle class="pin-pulse" r="16" fill="url(#pinGlow)" />
                   <circle class="pin-ring" r="9" fill="none" stroke="#FAF5F0" stroke-width="1.5" />
-                  <circle class="pin-core" r="4.5" fill="#C95C78" />
+                  <circle class="pin-core" r="4.5" fill="#FF7096" />
                   <text class="pin-label-svg" x="12" y="4">Dhaka Tech Guild (16 Hubs)</text>
                 </g>
-                <g class="map-pin-hotspot" data-id="hub-rajasthan" data-region="south-asia" transform="translate(655, 205)">
+
+                <!-- 4. Rajasthan Artisan, India (South Asia) -->
+                <g class="map-pin-hotspot" data-id="hub-rajasthan" data-region="south-asia" transform="translate(670, 214)">
                   <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
-                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <circle class="pin-core" r="4" fill="#FF7096" />
                   <text class="pin-label-svg" x="10" y="3">Rajasthan Artisan (12 Hubs)</text>
                 </g>
-                <g class="map-pin-hotspot" data-id="hub-oaxaca" data-region="latin-america" transform="translate(185, 205)">
+
+                <!-- 5. Oaxaca Weavers, Mexico (Latin America) -->
+                <g class="map-pin-hotspot" data-id="hub-oaxaca" data-region="latin-america" transform="translate(195, 218)">
                   <circle class="pin-pulse" r="16" fill="url(#pinGlow)" />
                   <circle class="pin-ring" r="9" fill="none" stroke="#FAF5F0" stroke-width="1.5" />
-                  <circle class="pin-core" r="4.5" fill="#C95C78" />
+                  <circle class="pin-core" r="4.5" fill="#FF7096" />
                   <text class="pin-label-svg" x="12" y="4">Oaxaca Weavers (10 Hubs)</text>
                 </g>
-                <g class="map-pin-hotspot" data-id="hub-peru" data-region="latin-america" transform="translate(245, 310)">
+
+                <!-- 6. Andean Guild, Peru (Latin America) -->
+                <g class="map-pin-hotspot" data-id="hub-peru" data-region="latin-america" transform="translate(252, 318)">
                   <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
-                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <circle class="pin-core" r="4" fill="#FF7096" />
                   <text class="pin-label-svg" x="10" y="3">Andean Guild (6 Hubs)</text>
                 </g>
-                <g class="map-pin-hotspot" data-id="hub-manila" data-region="southeast-asia" transform="translate(790, 240)">
+
+                <!-- 7. Visayas Outreach, Philippines (Southeast Asia) -->
+                <g class="map-pin-hotspot" data-id="hub-manila" data-region="southeast-asia" transform="translate(798, 252)">
                   <circle class="pin-pulse" r="14" fill="url(#pinGlow)" />
-                  <circle class="pin-core" r="4" fill="#C95C78" />
+                  <circle class="pin-core" r="4" fill="#FF7096" />
                   <text class="pin-label-svg" x="10" y="3">Visayas Outreach (8 Hubs)</text>
                 </g>
               </svg>
@@ -1113,6 +1152,29 @@
               </div>
 
               <button class="btn btn-sm btn-accent btn-block" data-modal="donateModal">Support This Hub</button>
+
+              <!-- Global Field Channels & Social Icons -->
+              <div class="map-social-connect">
+                <span class="social-connect-label">Live Field Channels & Dispatch:</span>
+                <div class="map-social-icons">
+                  <a href="#" class="map-social-btn" aria-label="Instagram Hub Stories">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="#" class="map-social-btn" aria-label="LinkedIn Alliance Network">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="#" class="map-social-btn" aria-label="X / Twitter Updates">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                    <span>X</span>
+                  </a>
+                  <a href="#" class="map-social-btn" aria-label="YouTube Field Reports">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    <span>YouTube</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
